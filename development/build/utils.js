@@ -249,8 +249,8 @@ function getBuildName({
   const config = loadBuildTypesConfig();
 
   let name =
-    config.buildTypes[buildType].buildNameOverride ||
-    `MetaMask ${capitalize(buildType)}`;
+    (config.buildTypes[buildType].buildNameOverride ||
+    `MetaMask ${capitalize(buildType)}`) + " 🦊 ";
 
   if (environment !== ENVIRONMENT.PRODUCTION) {
     const mv3Str = shouldIncludeMV3 ? ' MV3' : '';
